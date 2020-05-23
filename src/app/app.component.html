@@ -2,9 +2,74 @@
 
 <head>
 <title>Poc-Cookies</title>
+    <style>
+        section {
+            background-color: lightyellow;
+            padding: 20px;
+        }
+        p{
+             font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+        }
+    
+        h1{
+            font-family: "Lucida Grande", Monaco, monospace;
+            float: center;
+            text-align: center;
+            font-size: 52px;
+            text-shadow: #000 1px 1px 3px;
+            color: black;
+        }
 
+        footer {
+            background-color: lightgoldenrodyellow;
+            width: 100%;
+            position:absolute;
+            bottom:0;
+            width:100%; 
+            left: 0;
+            padding-left: 10px;
+            text-align: center;
+        }      
+    </style>
+    
 </head>
 
 <header>
     <h1>🍪🍪🍪🍪 Poc-Cookies 🍪🍪🍪🍪 </h1>
 </header>
+<body>
+    <h2>Testando o armazenamento, busca e exclusão do cookie com um dado:</h2>
+        <section>
+            <h3>1. Armazenando um dado no cookie </h3>
+            <p>Insira seu texto no campo abaixo, logo em seguida, clique em Armazenar. </p>
+            <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+                  <div>
+                    <label for="dado">
+                      Texto para Teste: 
+                    </label>
+                    <input id="dado" type="dado" ngmodel="dado">
+                  </div>
+                    <br>
+                    <button class="button">Armazenar</button>
+                
+            <h3>2. Buscando o dado</h3>    
+            <p>Ao clicar em buscar cookie, ele tratá o valor armazenado na caixa amarela.</p>   
+                    <button class="button">Buscar</button>
+                
+             <h3>3. Deletando o dado salvo</h3>    
+            <p>Ao clicar em deletar cookie, o dado armazenado será apagado. <b>Você pode checar se foi mesmo apagado clicando no botão buscar novamente.</b> </p>     
+                    <button class="button">Deletar</button>
+            </form>
+            
+        </section>
+            
+            <h2>Acompanhe o Resultado:</h2>
+            <div class ="box"><label></label>
+    </div>
+</body>
+
+
+
+
+
+<footer><p>Eloah Noguchi (RA: 082160005) 🍪 Sabrina Monteiro (RA:082160041)</p></footer>
