@@ -93,34 +93,33 @@
     </header>
    
         <section>
-
-            <h3>1. Armazenando um dado no cookie </h3>
-            <p>Insira seu texto no campo abaixo, logo em seguida, clique em Armazenar. </p>
             <form>
-                  <div>
-                    <label for="dado">
-                      Texto para Teste: 
-                    </label>
-                    <input id="dado" type="dado" ngmodel="dado">
-                  </div>
-                    <br>
-                    <button class="button" ng-click="criarcookie()">Armazenar</button>
+                <h3>1. Armazenando um dado no cookie </h3>
+                <p>Insira seu texto no campo abaixo, logo em seguida, clique em Armazenar. </p>
+
+                      <div>
+                        <label for="dado">
+                          Texto para Teste: 
+                        </label>
+                        <input id="dado" type="dado" ([ng-model])="dado">
+                      </div>
+                        <br>
+                        <button class="btn btn-primary" (click)="criarcookie()">Armazenar</button>
+
+                    <br><br>
+                <h3>2. Buscando o dado</h3>    
+                <p>Ao clicar em buscar cookie, ele tratá o valor armazenado na coluna lateral direita abaixo de "Acompanhe o Resultado:"</p>   
+                        <button class="btn btn-primary" (click)="buscarcookie()">Buscar</button>
+                    <br><br><br>
+                 <h3>3. Deletando o dado salvo</h3>    
+                <p>Ao clicar em deletar cookie, o dado armazenado será apagado. <br>
+                    <b>Você pode checar se foi mesmo apagado clicando no botão buscar novamente.</b> </p>     
+                        <button class="btn btn-primary" (click)="deletarcookie()">Deletar</button>
             </form>
-                <br><br>
-            <h3>2. Buscando o dado</h3>    
-            <p>Ao clicar em buscar cookie, ele tratá o valor armazenado na coluna lateral direita abaixo de "Acompanhe o Resultado:"</p>   
-                    <button class="button"  ng-click="buscarcookie()">Buscar</button>
-                <br><br><br>
-             <h3>3. Deletando o dado salvo</h3>    
-            <p>Ao clicar em deletar cookie, o dado armazenado será apagado. <br>
-                <b>Você pode checar se foi mesmo apagado clicando no botão buscar novamente.</b> </p>     
-                    <button class="button"  ng-click="deletarcookie()">Deletar</button>
-            
-            
         </section>
             <aside>
                 <h2>Acompanhe o Resultado:</h2>
-                <p><b>{{ dado }}</b></p>
+                <p><b>{{ salvonocookie }}</b></p>
             </aside>
 
 <footer><p>Eloah Noguchi (RA: 082160005) 🍪 Sabrina Monteiro (RA:082160041)</p></footer></body>

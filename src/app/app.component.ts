@@ -8,12 +8,12 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class AppComponent {
   title = 'Poc-Cookies';
-  dado: string;
-  salvonocookie: string;
+  dado: string = "";
+  salvonocookie: string = "";
   constructor (private cookieService: CookieService) {}
 
   criarcookie () : void {
-    console.log("criarcookie");
+    console.log(this.dado);
     this.cookieService.set('criarcookie', this.dado)
   }
   buscarcookie() : void{
