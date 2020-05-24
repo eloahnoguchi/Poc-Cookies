@@ -1,14 +1,14 @@
 <!DOCTYPE HTML>
 
 <head>
-<title>Poc-Cookies</title>
+    <title>Poc-Cookies</title>
     <style>
         body {
-
             background-color: white;
             padding: 1px;
             font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
         }
+
         section {
             background-color: lightyellow;
             padding: 20px;
@@ -19,8 +19,8 @@
             position: fixed;
             margin-left: 4%;
         }
-        
-        aside{
+
+        aside {
             background-color: #88C3D0;
             color: white;
             float: right;
@@ -30,7 +30,8 @@
             margin-right: 4%;
             text-align: center;
         }
-        box{
+
+        box {
             width: 100;
             height: 200px;
             background-color: #F0DD9D;
@@ -38,37 +39,40 @@
             border: 1px solid #fff;
             padding: 10px;
         }
-    
+
         header {
-            font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
             text-align: center;
             width: 100%;
             float: center;
             background-color: white;
             margin-bottom: -15px;
         }
-        
-        button{
+
+        button {
             width: 100px;
             height: 30px;
             font-size: 13px;
             color: white;
             font-style: bold;
-            background-color:#88C3D0; 
+            background-color: #88C3D0;
             box-shadow: 1px 1px 2px #000;
         }
-        h1{
+
+        h1 {
             margin-bottom: -40px;
             font-size: 50px;
             text-shadow: #000 1px 1px 2px;
             color: #EB6081;
             padding: 15px;
         }
+
         h2 {
             font-size: 24px;
             padding: 15px;
         }
-        h3{
+
+        h3 {
             border-bottom: 3px solid #88C3D0;
         }
 
@@ -76,50 +80,51 @@
             background-color: #EB6081;
             color: white;
             width: 100%;
-            position:absolute;
-            bottom:0;
-            width:100%; 
+            position: absolute;
+            bottom: 0;
             left: 0;
-            padding-left: 10px;
             text-align: center;
-        }      
+        }
     </style>
-    
+
 </head>
+
 <body>
     <header>
         <h1>🍪🍪🍪🍪 Poc-Cookies 🍪🍪🍪🍪 </h1>
-            <h2>Testando o armazenamento, busca e exclusão do cookie com um dado</h2>
+        <h2>Testando o armazenamento, busca e exclusão do cookie com um dado</h2>
     </header>
-   
-        <section>
-            <form>
-                <h3>1. Armazenando um dado no cookie </h3>
-                <p>Insira seu texto no campo abaixo, logo em seguida, clique em Armazenar. </p>
 
-                      <div>
-                        <label for="dado">
-                          Texto para Teste: 
-                        </label>
-                        <input id="dado" type="dado" ([ng-model])="dado">
-                      </div>
-                        <br>
-                        <button class="btn btn-primary" (click)="criarcookie()">Armazenar</button>
+    <section>
+            <h3>1. Armazenando um dado no cookie </h3>
+            <p>Insira seu texto no campo abaixo, logo em seguida, clique em Armazenar. </p>
 
-                    <br><br>
-                <h3>2. Buscando o dado</h3>    
-                <p>Ao clicar em buscar cookie, ele tratá o valor armazenado na coluna lateral direita abaixo de "Acompanhe o Resultado:"</p>   
-                        <button class="btn btn-primary" (click)="buscarcookie()">Buscar</button>
-                    <br><br><br>
-                 <h3>3. Deletando o dado salvo</h3>    
-                <p>Ao clicar em deletar cookie, o dado armazenado será apagado. <br>
-                    <b>Você pode checar se foi mesmo apagado clicando no botão buscar novamente.</b> </p>     
-                        <button class="btn btn-primary" (click)="deletarcookie()">Deletar</button>
-            </form>
-        </section>
-            <aside>
-                <h2>Acompanhe o Resultado:</h2>
-                <p><b>{{ salvonocookie }}</b></p>
-            </aside>
+            <div>
+                <label for="dado">
+                    Texto para Teste:
+                </label>
+                <input id="dado" type="text" [(ngModel)]="dado">
+            </div>
+            <br>
+            <button (click)="criarcookie()">Armazenar</button>
 
-<footer><p>Eloah Noguchi (RA: 082160005) 🍪 Sabrina Monteiro (RA:082160041)</p></footer></body>
+            <br><br>
+            <h3>2. Buscando o dado</h3>
+            <p>Ao clicar em buscar cookie, ele tratá o valor armazenado na coluna lateral direita abaixo de "Acompanhe o
+                Resultado:"</p>
+            <button (click)="buscarcookie()">Buscar</button>
+            <br><br><br>
+            <h3>3. Deletando o dado salvo</h3>
+            <p>Ao clicar em deletar cookie, o dado armazenado será apagado. <br>
+                <b>Você pode checar se foi mesmo apagado clicando no botão buscar novamente.</b> </p>
+            <button (click)="deletarcookie()">Deletar</button>
+    </section>
+    <aside>
+        <h2>Acompanhe o Resultado:</h2>
+        <p><b>{{ salvonocookie }}</b></p>
+    </aside>
+
+    <footer>
+        <p>Eloah Noguchi (RA: 082160005) 🍪 Sabrina Monteiro (RA:082160041)</p>
+    </footer>
+</body>
